@@ -4,9 +4,7 @@ import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { setStep1Data, setStep2Data } from "../../redux/slices/shelterSlice";
 
-// ------------------------
-// Styled-components
-// ------------------------
+
 const FormContainer = styled.div`
   max-width: 600px;
   margin: 2rem auto;
@@ -49,14 +47,12 @@ const Button = styled.button`
   }
 `;
 
-// ------------------------
-// Componente Step3
-// ------------------------
+
 function Step3() {
   const navigate = useNavigate();
   const dispatch = useDispatch();
 
-  // Tomamos info de Redux, con valor por defecto
+ 
   const shelter = useSelector((state) => state.shelter || {});
   const { info = {} } = shelter;
 
@@ -65,12 +61,12 @@ function Step3() {
   };
 
   const handleFinish = () => {
-    // 🔹 Opcional: actualizar Redux si quieres
+    
     dispatch(setStep1Data(info));
     dispatch(setStep2Data(info));
 
-    console.log("✅ Registro finalizado");
-    navigate("/perfil-refugio"); // redirige al perfil
+    console.log("Registro finalizado");
+    navigate("/perfil-refugio");
   };
 
   return (

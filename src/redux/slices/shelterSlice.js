@@ -11,13 +11,13 @@ const initialState = {
     alcaldia: "",
     estado: "",
     responsable: "",
-    reciben: "", // Perros/Gatos/Otro
+    reciben: "", 
     animalesResguardo: "",
     especieResguardo: "",
     adoptables: "",
     especieAdoptables: "",
     hogaresTemporales: "no",
-    horario: "Lunes a Viernes 9am - 5pm", // Nuevo campo
+    horario: "Lunes a Viernes 9am - 5pm", 
   },
   pets: {
     adoptables: [],

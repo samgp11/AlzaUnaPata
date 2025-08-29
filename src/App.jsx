@@ -4,7 +4,7 @@ import About from "./pages/About/About";
 import Step1 from "./pages/RegisterShelter/Step1";
 import Step2 from "./pages/RegisterShelter/Step2";
 import Step3 from "./pages/RegisterShelter/Step3";
-import Profile from "./pages/ShelterProfile/Profile"; // <- crearás después
+import Profile from "./pages/ShelterProfile/Profile"; 
 import Login from "./pages/Login/Login";
 import AddPet from "./pages/AddPet/AddPet";
 

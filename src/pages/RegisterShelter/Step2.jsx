@@ -4,9 +4,7 @@ import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { setStep2Data } from "../../redux/slices/shelterSlice";
 
-// ------------------------
-// Styled-components
-// ------------------------
+
 const FormContainer = styled.div`
   max-width: 600px;
   margin: 2rem auto;
@@ -63,9 +61,7 @@ const Button = styled.button`
   }
 `;
 
-// ------------------------
-// Componente Step2
-// ------------------------
+
 function Step2() {
   const navigate = useNavigate();
   const dispatch = useDispatch();
@@ -87,12 +83,12 @@ function Step2() {
 
   const handleContinue = (e) => {
     e.preventDefault();
-    dispatch(setStep2Data(formData)); // ✅ guardamos en Redux
-    navigate("/registra-tu-refugio/step3"); // ✅ siguiente paso
+    dispatch(setStep2Data(formData));
+    navigate("/registra-tu-refugio/step3"); 
   };
 
   const handleBack = () => {
-    navigate("/registra-tu-refugio"); // volver a Step1
+    navigate("/registra-tu-refugio"); 
   };
 
   return (

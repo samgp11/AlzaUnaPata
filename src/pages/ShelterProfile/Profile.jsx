@@ -4,9 +4,7 @@ import { useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
 import Horarios from "../../components/Horarios/Horarios";
 
-// ------------------------
-// Styled-components básicos
-// ------------------------
+
 const Container = styled.div`
   padding: 20px;
 `;
@@ -78,18 +76,16 @@ const AddButton = styled.button`
   cursor: pointer;
 `;
 
-// ------------------------
-// Componente Profile
-// ------------------------
+
 function Profile() {
   const navigate = useNavigate();
 
-  // 🔹 Tomar shelter de Redux con valores por defecto
+
   const shelter = useSelector((state) => state.shelter || {});
   const { info = {}, pets = {} } = shelter;
   const { adoptables = [], temporales = [], apadrinables = [] } = pets;
 
-  // 🔹 Estado local
+
   const [cover, setCover] = useState(null);
   const [profilePic, setProfilePic] = useState(null);
   const [schedule, setSchedule] = useState("Lunes a Viernes, 10am - 6pm");

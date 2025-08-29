@@ -6,8 +6,6 @@ import { configureStore } from "@reduxjs/toolkit";
 import shelterReducer, { addPet } from "../redux/slices/shelterSlice";
 import { BrowserRouter } from "react-router-dom";
 
-// ------------------------
-// Mock de navigate
 const mockedNavigate = jest.fn();
 jest.mock("react-router-dom", () => ({
   ...jest.requireActual("react-router-dom"),
@@ -78,12 +76,12 @@ describe("AddPet Component", () => {
     const guardarBtn = screen.getByText(/Guardar/i);
     fireEvent.click(guardarBtn);
 
-    // Revisamos que el pet fue agregado al store
+
     const state = store.getState().shelter.pets.adoptables;
     expect(state).toHaveLength(1);
     expect(state[0].name).toBe("Firulais");
 
-    // Revisamos que navigate fue llamado
+
     expect(mockedNavigate).toHaveBeenCalledWith("/perfil-refugio");
   });
 
@@ -101,7 +99,6 @@ describe("AddPet Component", () => {
 
     fireEvent.change(fileInput, { target: { files: [file] } });
 
-    // Como FileReader es async, debemos esperar a que aparezca el preview
     setTimeout(() => {
       const preview = screen.getByAltText(/Preview mascota/i);
       expect(preview).toBeInTheDocument();

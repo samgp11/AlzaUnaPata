@@ -61,7 +61,7 @@ describe("Horarios Component", () => {
       </Provider>
     );
 
-    // Pasar a modo edición
+    
     fireEvent.click(screen.getByText(/Editar horarios/i));
 
     const input = screen.getByDisplayValue("Lunes a Viernes 9am - 5pm");
@@ -69,11 +69,11 @@ describe("Horarios Component", () => {
 
     fireEvent.click(screen.getByText(/Guardar/i));
 
-    // Revisamos que el estado de Redux se haya actualizado
+  
     const state = store.getState().shelter.info.horario;
     expect(state).toBe("Lunes a Domingo 8am - 6pm");
 
-    // El modo edición se cierra y muestra el texto actualizado
+
     expect(screen.getByText(/Lunes a Domingo 8am - 6pm/i)).toBeInTheDocument();
   });
 });

@@ -4,9 +4,7 @@ import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { addPet } from "../../redux/slices/shelterSlice";
 
-// ------------------------
-// Styled-components
-// ------------------------
+
 const FormContainer = styled.div`
   max-width: 600px;
   margin: 2rem auto;
@@ -72,9 +70,7 @@ const Preview = styled.img`
   border: 1px solid #ddd;
 `;
 
-// ------------------------
-// Componente AddPet
-// ------------------------
+
 function AddPet() {
   const navigate = useNavigate();
   const dispatch = useDispatch();
@@ -96,7 +92,7 @@ function AddPet() {
     });
   };
 
-  // Manejo de la foto
+ 
   const handleFileChange = (e) => {
     const file = e.target.files[0];
     if (!file) return;

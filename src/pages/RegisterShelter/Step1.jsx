@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { setStep1Data } from "../../redux/slices/shelterSlice";
 
-// 🔹 Contenedor principal
+
 const FormContainer = styled.div`
   max-width: 600px;
   margin: 2rem auto;
@@ -14,14 +14,14 @@ const FormContainer = styled.div`
   box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
 `;
 
-// 🔹 Título
+
 const Title = styled.h2`
   text-align: center;
   margin-bottom: 1.5rem;
   color: #333;
 `;
 
-// 🔹 Grupo de campos
+
 const FormGroup = styled.div`
   display: flex;
   flex-direction: column;
@@ -42,7 +42,7 @@ const FormGroup = styled.div`
   }
 `;
 
-// 🔹 Botón
+
 const ContinueButton = styled.button`
   background-color: #ff914d;
   color: white;
@@ -62,7 +62,7 @@ const ContinueButton = styled.button`
 
 function Step1() {
   const navigate = useNavigate();
-  const dispatch = useDispatch(); // 🔹 Mover dentro del componente
+  const dispatch = useDispatch(); 
 
   const [formData, setFormData] = useState({
     nombre: "",
@@ -83,8 +83,8 @@ function Step1() {
 
   const handleContinue = (e) => {
     e.preventDefault();
-    dispatch(setStep1Data(formData)); // ✅ guardamos datos en Redux
-    navigate("/registra-tu-refugio/step2"); // ✅ siguiente paso
+    dispatch(setStep1Data(formData)); 
+    navigate("/registra-tu-refugio/step2");
   };
 
   return (

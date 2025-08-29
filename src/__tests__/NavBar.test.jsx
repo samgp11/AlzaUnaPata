@@ -11,22 +11,22 @@ describe("NavBar Component", () => {
       </BrowserRouter>
     );
 
-    // Logo
+    //Logo
     const logo = screen.getByText(/🐾 Alza una Pata/i);
     expect(logo).toBeInTheDocument();
     expect(logo.closest("a")).toHaveAttribute("href", "/");
 
-    // Link ¿Quiénes somos?
+    //¿Quiénes somos?
     const quienes = screen.getByText(/¿Quiénes somos\?/i);
     expect(quienes).toBeInTheDocument();
     expect(quienes.closest("a")).toHaveAttribute("href", "/quienes-somos");
 
-    // Link Registra tu refugio
+    //Registra tu refugio
     const registra = screen.getByText(/Registra tu refugio/i);
     expect(registra).toBeInTheDocument();
     expect(registra.closest("a")).toHaveAttribute("href", "/registra-tu-refugio");
 
-    // Link Iniciar sesión
+    //Iniciar sesión
     const login = screen.getByText(/Iniciar sesión/i);
     expect(login).toBeInTheDocument();
     expect(login.closest("a")).toHaveAttribute("href", "/login");

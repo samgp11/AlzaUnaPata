@@ -2,14 +2,14 @@ import React from "react";
 import styled from "styled-components";
 import { useNavigate } from "react-router-dom";
 
-// 🔹 Contenedor general
+
 const HomeContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
 `;
 
-// 🔹 Cada sección
+
 const Section = styled.section`
   display: flex;
   flex-direction: column;
@@ -19,7 +19,7 @@ const Section = styled.section`
   max-width: 800px;
 `;
 
-// 🔹 Imagen
+
 const SectionImage = styled.img`
   width: 100%;
   max-width: 400px;
@@ -29,14 +29,14 @@ const SectionImage = styled.img`
   box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15);
 `;
 
-// 🔹 Texto
+
 const SectionText = styled.h2`
   font-size: 1.8rem;
   margin-bottom: 1rem;
   color: #333;
 `;
 
-// 🔹 Botón
+
 const SectionButton = styled.button`
   background-color: #ff914d;
   color: white;
