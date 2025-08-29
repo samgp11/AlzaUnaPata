@@ -2,8 +2,6 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import { useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
-import Horarios from "../../components/Horarios/Horarios";
-
 
 const Container = styled.div`
   padding: 20px;
@@ -76,19 +74,16 @@ const AddButton = styled.button`
   cursor: pointer;
 `;
 
-
 function Profile() {
   const navigate = useNavigate();
-
 
   const shelter = useSelector((state) => state.shelter || {});
   const { info = {}, pets = {} } = shelter;
   const { adoptables = [], temporales = [], apadrinables = [] } = pets;
 
-
-  const [cover, setCover] = useState(null);
-  const [profilePic, setProfilePic] = useState(null);
-  const [schedule, setSchedule] = useState("Lunes a Viernes, 10am - 6pm");
+  const [cover] = useState(null);
+  const [profilePic] = useState(null);
+  const [schedule] = useState("Lunes a Viernes, 10am - 6pm");
 
   return (
     <Container>
